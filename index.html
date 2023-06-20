@@ -164,7 +164,7 @@
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm run prepare </span><br></pre></td></tr></table></figure>
 
 <p><em><strong>10.4 添加 commit-msg 钩子,执行信息校验</strong></em></p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/pre-commit &quot;npm run lint-staged&quot;</span><br><span class="line">npx husky add .husky/commit-msg &#x27;npx --no-install commitlint --edit &quot;$1&quot;&#x27;</span><br><span class="line">根目录下新建 lint-staged.config.js</span><br><span class="line"> module.exports = &#123;</span><br><span class="line">   &quot;*.&#123;js,jsx,ts,tsx&#125;&quot;: [&quot;eslint --fix&quot;, &quot;prettier --write&quot;],</span><br><span class="line">   &quot;&#123;!(package)*.json,*.code-snippets,.!(browserslist)*rc&#125;&quot;: [&quot;prettier --write--parser json&quot;],</span><br><span class="line">   &quot;package.json&quot;: [&quot;prettier --write&quot;],</span><br><span class="line">   &quot;*.vue&quot;: [&quot;eslint --fix&quot;, &quot;prettier --write&quot;, &quot;stylelint --fix&quot;],</span><br><span class="line">   &quot;*.&#123;scss,less,styl,html&#125;&quot;: [&quot;stylelint --fix&quot;, &quot;prettier --write&quot;],</span><br><span class="line">   &quot;*.md&quot;: [&quot;prettier --write&quot;]</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/pre-commit &quot;npm run lint-staged&quot;</span><br><span class="line">npx husky add .husky/commit-msg &#x27;npx --no-install commitlint --edit &quot;$1&quot;&#x27;</span><br><span class="line">根目录下新建 lint-staged.config.js</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  &quot;*.&#123;js,jsx,ts,tsx&#125;&quot;: [&quot;eslint --fix&quot;, &quot;prettier --write&quot;],</span><br><span class="line">  &quot;&#123;!(package)*.json,*.code-snippets,.!(browserslist)*rc&#125;&quot;: [&quot;prettier --write--parser json&quot;],</span><br><span class="line">  &quot;package.json&quot;: [&quot;prettier --write&quot;],</span><br><span class="line">  &quot;*.vue&quot;: [&quot;eslint --fix&quot;, &quot;prettier --write&quot;, &quot;stylelint --fix&quot;],</span><br><span class="line">  &quot;*.&#123;scss,less,styl,html&#125;&quot;: [&quot;stylelint --fix&quot;, &quot;prettier --write&quot;],</span><br><span class="line">  &quot;*.md&quot;: [&quot;prettier --write&quot;]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p><em><strong>10.5 安装 commit 校验工具</strong></em></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm i @commitlint/cli @commitlint/config-conventional -D</span><br></pre></td></tr></table></figure>
@@ -190,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/11/%E4%BD%BF%E7%94%A8eslint+perttier%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%20/" data-id="clj44ep0l00010c3m80f13ix3" data-title="使用eslint+perttier初始化项目" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2022/04/11/%E4%BD%BF%E7%94%A8eslint+perttier%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%20/" data-id="clj44grnw00014j3m0moc85f4" data-title="使用eslint+perttier初始化项目" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -229,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/11/%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-id="clj44ep0j00000c3m9y8scu9v" data-title="如何新建一个博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2021/05/11/%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-id="clj44grnu00004j3mdvun7a9w" data-title="如何新建一个博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
