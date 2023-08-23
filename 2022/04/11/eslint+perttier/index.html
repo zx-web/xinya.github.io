@@ -18,7 +18,7 @@
 <meta property="og:description" content="ESLint和Prettier是两个非常流行的JavaScript代码规范工具。ESLint用于检查代码中的语法错误和潜在问题，而Prettier用于格式化代码，使其符合一致的风格。在本文中，我们将介绍如何使用ESLint和Prettier来提高代码质量和可读性 (默认你已经完成项目初始化)。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-11T07:00:52.000Z">
-<meta property="article:modified_time" content="2023-08-23T09:45:03.667Z">
+<meta property="article:modified_time" content="2023-08-23T09:48:37.009Z">
 <meta property="article:author" content="新伢">
 <meta name="twitter:card" content="summary">
   
@@ -278,7 +278,7 @@
 <p><em><strong>9.2 package.json 中添加脚本</strong></em></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pnpm set-script prepare &quot;husky install&quot; </span><br><span class="line">pnpm set-script lint-staged &quot;lint-staged&quot; </span><br></pre></td></tr></table></figure>
 <p><em><strong>9.3 根目录创建.husky文件夹,将 git hooks 钩子交由husky执行</strong></em></p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm run prepare </span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm prepare </span><br></pre></td></tr></table></figure>
 
 <p><em><strong>9.4 添加 commit-msg 钩子,执行信息校验</strong></em></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/pre-commit &quot;npm run lint-staged&quot;</span><br><span class="line">npx husky add .husky/commit-msg &#x27;npx --no-install commitlint --edit &quot;$1&quot;&#x27;</span><br><span class="line">根目录下新建 lint-staged.config.js</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  &quot;*.&#123;js,jsx,ts,tsx&#125;&quot;: [&quot;eslint --fix&quot;, &quot;prettier --write&quot;],</span><br><span class="line">  &quot;&#123;!(package)*.json,*.code-snippets,.!(browserslist)*rc&#125;&quot;: [&quot;prettier --write--parser json&quot;],</span><br><span class="line">  &quot;package.json&quot;: [&quot;prettier --write&quot;],</span><br><span class="line">  &quot;*.vue&quot;: [&quot;eslint --fix&quot;, &quot;prettier --write&quot;, &quot;stylelint --fix&quot;],</span><br><span class="line">  &quot;*.&#123;scss,less,styl,html&#125;&quot;: [&quot;stylelint --fix&quot;, &quot;prettier --write&quot;],</span><br><span class="line">  &quot;*.md&quot;: [&quot;prettier --write&quot;]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
